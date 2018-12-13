@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Roboto Slab Regular';
+    src: url('../fonts/RobotoSlab/RobotoSlab-Regular.eot');
+    src: url('../fonts/RobotoSlab/RobotoSlab-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/RobotoSlab/RobotoSlab-Regular.woff') format('woff'),
+    url('../fonts/RobotoSlab/RobotoSlab-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'Roboto Slab Regular' !important;
+}
+
+.select2-container--default .select2-selection--multiple,
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: 1px solid #ced4da !important;
+}
+
+.row-hidden {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    max-height: 140px;
+}
+
+.table td {
+    vertical-align: middle !important;
+    height: 165px;
+}
+
+.navbar .logo-block {
+    background: url('../img/logo.png') 100% 100% no-repeat;
+    height: 50px;
+    width: 200px;
+    background-size: cover;
+}
+
+.navbar.scrolled .logo-block {
+    background: url('../img/logo2.png') 100% 100% no-repeat;
+}

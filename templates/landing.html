@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<title>Tender One &mdash; мониторинг государственных закупок</title>
+		<meta name="description" content="Free Bootstrap 4 Template by uicookies.com">
+		<meta name="keywords" content="Free website templates, Free bootstrap themes, Free template, Free bootstrap, Free website template">
+    
+        <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600|Montserrat:200,300,400" rel="stylesheet">
+
+        <link rel="stylesheet" href="/landing/css/bootstrap/bootstrap.css">
+        <link rel="stylesheet" href="/landing/fonts/ionicons/css/ionicons.min.css">
+        <link rel="stylesheet" href="/landing/fonts/law-icons/font/flaticon.css">
+        <link rel="stylesheet" href="/landing/fonts/fontawesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/landing/css/slick.css">
+        <link rel="stylesheet" href="/landing/css/slick-theme.css">
+        <link rel="stylesheet" href="/landing/css/helpers.css">
+        <link rel="stylesheet" href="/landing/css/style.css">
+        <link rel="stylesheet" href="/landing/css/landing-2.css">
+        <link rel="stylesheet" href="/landing/css/custom.css">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	</head>
+	<body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
+
+    <nav class="navbar navbar-expand-lg navbar-dark pb_navbar pb_scrolled-light" id="pb-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+            <div class="logo-block"></div> 
+        </a>
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#probootstrap-navbar" aria-controls="probootstrap-navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span><i class="ion-navicon"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="probootstrap-navbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#section-home">Главная</a></li>
+            <li class="nav-item"><a class="nav-link" href="#section-features">Возможности</a></li>
+            <li class="nav-item"><a class="nav-link" href="#section-pricing">Тарифы</a></li>
+            <li class="nav-item cta-btn ml-xl-2 ml-lg-2 ml-md-0 ml-sm-0 ml-0"><a class="nav-link" href="/signin/"><span class="pb_rounded-4 px-4">{{if $.IsLogin}}Поиск{{else}}Войти{{end}}</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END nav -->
+
+    <section class="pb_cover_v3 overflow-hidden cover-bg-indigo cover-bg-opacity text-left pb_gradient_v1 pb_slant-light" id="section-home">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-12" style="margin-top: auto">
+            <h2 class="heading mb-3">Находи на 12% больше тендеров для обоснования НМЦК прямо сейчас благодаря морфологическому поиску и аукционной документации</h2>
+            <div class="text-center">
+                <p class="mb-5"><a class="btn btn-success btn-lg pb_btn-pill smoothscroll" href="#section-pricing"><span class="pb_font-14 text-uppercase pb_letter-spacing-1">Попробовать бесплатно</span></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+
+    <section class="pb_section bg-light pb_slant-white pb_pb-250" id="section-features">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-6 text-center mb-5">
+            <h2>Наши преимущества</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md- col-sm-6">
+            <div class="media d-block pb_feature-v1 text-left">
+              <div class="pb_icon"><i class="ion-ios-clock-outline pb_icon-gradient"></i></div>
+              <div class="media-body">
+                <h5 class="mt-0 mb-3 heading">Работа сервиса 24/7</h5>
+                <p class="text-sans-serif">Наш сервис работает для вас 24 часа в сутки, 7 дней в неделю и даже немного больше</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md- col-sm-6">
+            <div class="media d-block pb_feature-v1 text-left">
+              <div class="pb_icon"><i class="ion-ios-cloud-download-outline pb_icon-gradient"></i></div>
+              <div class="media-body">
+                <h5 class="mt-0 mb-3 heading">Выгрузка результата поиска в Excel</h5>
+                <p class="text-sans-serif">Вы можете производить выгрузку в формат xls не ограничиваясь парой тысяч строчек и заниматься последующей аналитикой</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md- col-sm-6">
+            <div class="media d-block pb_feature-v1 text-left">
+              <div class="pb_icon"><i class="ion-cash pb_icon-gradient"></i></div>
+              <div class="media-body">
+                <h5 class="mt-0 mb-3 heading">Суммы аукционов и контрактов в рублях и долларах США по курсу ЦБ РФ</h5>
+                <p class="text-sans-serif">Вы получаете возможность сверять суммы в долларах США по курсу центрального банка Российской Федерации на день выгрузки данных</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md- col-sm-6">
+            <div class="media d-block pb_feature-v1 text-left">
+              <div class="pb_icon"><i class="ion-ios-unlocked-outline pb_icon-gradient"></i></div>
+              <div class="media-body">
+                <h5 class="mt-0 mb-3 heading">Бесплатный доступ в базу на 5 дней</h5>
+                <p class="text-sans-serif">Вы получаете доступ  к базе данных на 5 дней абсолютно бесплатно. За это время у вас будет возможность ознакомиться с функциональными возможностями сервиса</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md- col-sm-6">
+            <div class="media d-block pb_feature-v1 text-left">
+              <div class="pb_icon"><i class="ion-ios-search pb_icon-gradient"></i></div>
+              <div class="media-body">
+                <h5 class="mt-0 mb-3 heading">Более результативный поиск</h5>
+                <p class="text-sans-serif">Мы осуществляем поиск по заданным фильтрам, морфологический поиск, поиск с подменой латинских символов на кириллицу</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md- col-sm-6">
+            <div class="media d-block pb_feature-v1 text-left">
+              <div class="pb_icon"><i class="ion-ios-color-wand-outline pb_icon-gradient"></i></div>
+              <div class="media-body">
+                <h5 class="mt-0 mb-3 heading">Большой набор фильтров и готовность их расширить по вашим предложения</h5>
+                <p class="text-sans-serif"> В нашем сервисе вы увидите множество фильтров, кроме того мы готовы выслушать ваши пожелания с возможностью дальнейшего расширения линейки фильтров</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+
+    <section class="pb_section pb_slant-white" id="section-pricing">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-6 text-center mb-5">
+            <h2>Выберите подходящий<br>Вам тариф</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="pb_pricing_v1 p-5 border text-center bg-white">
+                <h3>Демо</h3>
+                <span class="price">0<sup>₽</sup><span></span></span>
+                <p class="pb_font-15">Тестовый доступ на 5 дней</p>
+                <p class="mb-0"><br><a href="/demo/" role="button" class="btn btn-secondary">Попробовать</a></p>
+            </div>
+          </div>  
+          <div class="col-md-4">
+            <div class="pb_pricing_v1 p-5 border border-primary text-center bg-white">
+              <h3>Минимальный</h3>
+              <span class="price">7000<sup>₽</sup><span> в месяц</span></span>
+              <p class="pb_font-15">Доступ на 1 месяц <br>(без учета НДС)</p>
+              <p class="mb-0"><a href="#" role="button" class="btn btn-primary btn-shadow-blue" data-toggle="modal" data-target="#modalMin">Оставить заявку</a></p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="pb_pricing_v1 p-5 border text-center bg-white">
+              <h3>Базовый</h3>
+              <span class="price">6000<sup>₽</sup><span> в месяц</span></span>
+              <p class="pb_font-15">Доступ на 3 месяца <br>(без учета НДС)</p>
+              <p class="mb-0"><a href="#" role="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalBasic">Оставить заявку</a></p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="pb_pricing_v1 p-5 border text-center bg-white">
+              <h3>Стандарт</h3>
+              <span class="price">5500<sup>₽</sup><span> в месяц</span></span>
+              <p class="pb_font-15">Доступ на 6 месяцев <br>(без учета НДС)</p>
+              <p class="mb-0"><a href="#" role="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalStandard">Оставить заявку</a></p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="pb_pricing_v1 p-5 border text-center bg-white">
+              <h3>Бизнес</h3>
+              <span class="price">5000<sup>₽</sup><span> в месяц</span></span>
+              <p class="pb_font-15">Доступ на 12 месяцев <br>(без учета НДС)</p>
+              <p class="mb-0"><a href="#" role="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalBusiness">Оставить заявку</a></p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="pb_pricing_v1 p-5 border text-center bg-white">
+              <h3>Индивидуальный</h3>
+              <span class="price"><span>Цена договорная</span></span>
+              <p class="pb_font-15">Индивидуальный тарифный план</p>
+              <p class="mb-0"><a href="#" role="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalIndividual">Оставить заявку</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ENDs ection -->
+
+    <section class="pb_xl_py_cover overflow-hidden pb_slant-light pb_gradient_v1 cover-bg-opacity-8"  style="background-image: url(assets/images/1900x1200_img_5.jpg)">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-5 justify-content-center">
+            <h2 class="heading mb-5 pb_font-40">Выгодная цена</h2>
+            <div class="sub-heading">
+              <p class="mb-4">Оформите полный доступ к сервису по специальной цене! Для этого отправьте заявку на <a href="#" role="button" data-toggle="modal" data-target="#modalIndividual">индивидуальный тарифный</a> план до конца октября</p>
+            </div>
+          </div> 
+          <div class="col-md-1"></div>
+          <div class="col-md-5">
+              <form action="/demo/" method="post" class="bg-white rounded pb_form_v1">
+                <h2 class="mb-4 mt-0 text-center">Получить бесплатный доступ на 5 дней</h2>
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control pb_height-50 reverse" placeholder="Ваше ФИО">
+                </div>
+                <div class="form-group">
+                  <input type="text" name="email" class="form-control pb_height-50 reverse" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <input type="text" name="password" class="form-control pb_height-50 reverse" placeholder="Пароль">
+                </div>
+                <div class="form-group">
+                  <input type="submit" class="btn btn-primary btn-lg btn-block pb_btn-pill  btn-shadow-blue" value="Регистрация">
+                </div>
+              </form>
+        </div>
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+
+    <footer class="pb_footer bg-light" role="contentinfo">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <p class="pb_font-14">&copy; 2018 Tender One - мониторинг государственных закупок и аукционов. По всем вопросам обращаться на <a href="mailto:support@tender-one.ru">support@tender-one.ru</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal fade" id="modalMin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Тариф «Минимальный»</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form method="post" action="/request">
+                    <div class="modal-body">
+                        <input type="hidden" name="tariff" value="Минимальный">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="company" placeholder="Наименование организации" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="info" placeholder="Контактная информация" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
+                            Заявка успешно отправлена
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
+                            Произошла непредвиденная ошибка
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer text-center">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                        <button type="button" data-send class="btn btn-primary">Отправить заявку</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalBasic" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Тариф «Базовый»</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form method="post" action="/request">
+                    <div class="modal-body">
+                        <input type="hidden" name="tariff" value="Базовый">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="company" placeholder="Наименование организации" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="info" placeholder="Контактная информация" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
+                            Заявка успешно отправлена
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
+                            Произошла непредвиденная ошибка
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer text-center">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                        <button type="button" data-send class="btn btn-primary">Отправить заявку</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalStandard" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Тариф «Стандарт»</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form method="post" action="/request">
+                    <div class="modal-body">
+                        <input type="hidden" name="tariff" value="Стандарт">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="company" placeholder="Наименование организации" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="info" placeholder="Контактная информация" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
+                            Заявка успешно отправлена
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
+                            Произошла непредвиденная ошибка
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer text-center">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                        <button type="button" data-send class="btn btn-primary">Отправить заявку</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalBusiness" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Тариф «Бизнес»</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form method="post" action="/request">
+                    <div class="modal-body">
+                        <input type="hidden" name="tariff" value="Бизнес">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="company" placeholder="Наименование организации" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="info" placeholder="Контактная информация" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
+                            Заявка успешно отправлена
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
+                            Произошла непредвиденная ошибка
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer text-center">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                        <button type="button" data-send class="btn btn-primary">Отправить заявку</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalIndividual" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Тариф «Индивидуальный»</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form method="post" action="/request">
+                    <div class="modal-body">
+                        <input type="hidden" name="tariff" value="Индивидуальный">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="company" placeholder="Наименование организации" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="info" placeholder="Контактная информация" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
+                            Заявка успешно отправлена
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
+                            Произошла непредвиденная ошибка
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer text-center">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                        <button type="button" data-send class="btn btn-primary">Отправить заявку</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- loader -->
+    <div id="pb_loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#1d82ff"/></svg></div>
+
+
+
+    <script src="/landing/js/jquery.min.js"></script>
+    
+    <script src="/landing/js/popper.min.js"></script>
+    <script src="/landing/js/bootstrap.min.js"></script>
+    <script src="/landing/js/slick.min.js"></script>
+    <script src="/landing/js/jquery.mb.YTPlayer.min.js"></script>
+
+    <script src="/landing/js/jquery.waypoints.min.js"></script>
+    <script src="/landing/js/jquery.easing.1.3.js"></script>
+
+    <script src="/landing/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('[data-send]').on('click', function(e) {
+                e.preventDefault();
+
+                var $form = $(this).closest('form');
+                $.post('/requests/', $form.serialize(), function(response) {
+                    if (response.success) {
+                        $form.find('.alert-success').show();
+                    } else {
+                        $form.find('.alert-danger').show();
+                    }
+                });
+            });
+        });
+    </script>
+
+	</body>
+</html>

@@ -1,0 +1,192 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head>
+<style>
+{[if ne $.Email "mbulgako@ITS.JNJ.com"]}
+<!--
+{[end]}
+table
+{
+    mso-displayed-decimal-separator: "\,";
+    mso-displayed-thousand-separator: " ";
+}
+@page
+{
+    margin: 1.0in .75in 1.0in .75in;
+    mso-header-margin: .5in;
+    mso-footer-margin: .5in;
+}
+tr
+{
+/*    mso-number-format: "\@";*/
+    mso-height-source: userset;
+    height:60px;
+}
+col
+{
+    mso-width-source: userset;
+    mso-height-source: userset;
+    text-align: center;
+    vertical-align: middle;
+    mso-ruby-visibility:none;
+}
+br
+{
+    mso-data-placement: same-cell;
+}
+a
+{
+    font-size: 11px;
+}
+.styleHEAD
+{
+    mso-number-format: "\@";
+    border: .5pt solid black;
+    mso-pattern: auto none;
+    white-space: normal;
+    vertical-align: top;
+    text-align: left;
+    height:100%;
+}
+.styleDATA
+{
+    font-size: 11px;
+    mso-pattern: auto none;
+    border-top: .5pt solid silver;
+    border-right: .5pt solid silver;
+    border-bottom: .5pt solid silver;
+    border-left: .5pt solid silver;
+    mso-height-source: auto;
+    mso-number-format:"\@*"
+}
+.styleDATE
+{
+    font-size: 11px;
+    mso-pattern: auto none;
+    border-top: .5pt solid silver;
+    border-right: .5pt solid silver;
+    border-bottom: .5pt solid silver;
+    border-left: .5pt solid silver;
+    mso-height-source: auto;
+    mso-number-format:"Short Date"
+}
+.styleSTR
+{
+    font-size: 11px;
+    text-align: left;
+    mso-number-format:"\@";
+    border-top: .5pt solid silver;
+    border-right: .5pt solid silver;
+    border-bottom: .5pt solid silver;
+    border-left: .5pt solid silver;
+    mso-pattern: auto none;
+    white-space: normal;
+    height:100%;
+}
+.styleGENERAL
+{
+    font-size: 11px;
+    text-align: left;
+    mso-number-format:General;
+    border-top: .5pt solid silver;
+    border-right: .5pt solid silver;
+    border-bottom: .5pt solid silver;
+    border-left: .5pt solid silver;
+    mso-pattern: auto none;
+    white-space: normal;
+    height:100%;
+}
+
+.styleFooter
+{
+    font-size: 11px;
+    text-align: left;
+    border-top: .5pt solid silver;
+    border-right: .5pt solid silver;
+    border-bottom: .5pt solid silver;
+    border-left: .5pt solid silver;
+    height:100%;
+    mso-pattern: auto none;
+    white-space: normal;
+}
+{[if ne $.Email "mbulgako@ITS.JNJ.com"]}
+-->
+{[end]}
+</style>
+
+<!--[if gte mso 9]><xml>
+<x:ExcelWorkbook>
+    <x:ExcelWorksheets>
+        <x:ExcelWorksheet>
+            <x:Name>Статус документов</x:Name>
+            <x:WorksheetOptions>
+            <x:DefaultRowHeight>225</x:DefaultRowHeight>
+            <x:Unsynced/>
+            <x:Selected/>
+            <x:DoNotDisplayGridlines/>
+            <x:FreezePanes/>
+            <x:FrozenNoSplit/>
+            <x:SplitHorizontal>1</x:SplitHorizontal>
+            <x:TopRowBottomPane>1</x:TopRowBottomPane>
+            <x:ActivePane>2</x:ActivePane>
+            </x:WorksheetOptions>
+    </x:ExcelWorksheet>
+</x:ExcelWorksheets>
+</x:ExcelWorkbook>
+<o:shapelayout v:ext="edit">
+<o:idmap v:ext="edit" data="1"/>
+</o:shapelayout>
+<style>
+    v\:* {behavior:url(#default#VML);}
+    o\:* {behavior:url(#default#VML);}
+    x\:* {behavior:url(#default#VML);}
+    .shape {behavior:url(#default#VML);}
+</style>
+</xml><![endif]--></head><body><table>
+<col style="width:200px" >
+<col style="width:200px" >
+<col style="width:100px" >
+<col style="width:100px" >
+<col style="width:100px" >
+<col style="width:100px" >
+<col style="width:100px" >
+<col style="width:100px" >
+<col style="width:100px" >
+{[if ge $.Lvl 1]}
+<col style="width:150px">
+<col style="width:150px">
+{[end]}
+    <!--
+{[if ge $.Lvl 90]}
+<col style="width:150px">
+{[end]}
+    -->
+
+<tr>
+    {[if eq ($.FieldWithIdExist "FixPurchaseNumber") true]}<th class="styleHEAD">Номер извещения о проведении торгов</th>{[end]}
+    {[if eq ($.FieldWithIdExist "ObjectInfo") true]}<th class="styleHEAD">Наименование аукциона</th>{[end]}
+    {[if eq ($.FieldWithIdExist "PublishedXlsDate") true]}<th class="styleHEAD">Дата размещения</th>{[end]}
+    {[if eq ($.FieldWithIdExist "PriceExcel") true]}<th class="styleHEAD">НМЦК, руб.</th>{[end]}
+    {[if eq ($.FieldWithIdExist "Org") true]}<th class="styleHEAD">Организация, осуществляющая закупку</th>{[end]}
+    {[if eq ($.FieldWithIdExist "OrgINN") true]}<th class="styleHEAD">ИНН организации, осуществляющей заказ</th>{[end]}
+    {[if eq ($.FieldWithIdExist "Customer") true]}<th class="styleHEAD">Заказчик</th>{[end]}
+    {[if eq ($.FieldWithIdExist "CustomerINN") true]}<th class="styleHEAD">ИНН заказчика</th>{[end]}
+    {[if eq ($.FieldWithIdExist "GetRegnum") true]}<th class="styleHEAD">Номер реестровой записи</th>{[end]}
+    {[if eq ($.FieldWithIdExist "FormatCtPrice") true]}<th class="styleHEAD">Сумма контракта, руб.</th>{[end]}
+    <!--{[if eq ($.FieldWithIdExist "CtPName") true]}<th class="styleHEAD">Наименование контракта (for Яна with <3)</th>{[end]}-->
+</tr>
+
+{[range $.Data]}
+<tr class="search-result">
+    {[if eq ($.FieldWithIdExist "FixPurchaseNumber") true]}<td class="styleSTR" style='mso-number-format:"\@"'><a href="http://zakupki.gov.ru/epz/order/notice/ea44/view/common-info.html?regNumber={[.FixPurchaseNumber]}" target="_blank">{[.FixPurchaseNumber]}</a></td>{[end]}
+    {[if eq ($.FieldWithIdExist "ObjectInfo") true]}<td class="styleDATA">{[.ObjectInfo]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "PublishedXlsDate") true]}<td class="styleDATE">{[.PublishedXlsDate]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "PriceExcel") true]}<td class="styleDATA" style='mso-number-format:Standard;'>{[.PriceExcel]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "Org") true]}<td class="styleSTR">{[.Org.Value]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "OrgINN") true]}<td class="styleSTR">{[.OrgINN.Value]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "Customer") true]}<td class="styleSTR">{[.Customer.Value]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "CustomerINN") true]}<td class="styleSTR">{[.CustomerINN.Value]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "GetRegnum") true]}<td class="styleSTR" style='mso-number-format:"\@"'><a href="http://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber={[.GetRegnum]}" target="_blank">{[.GetRegnum]}</a></td>{[end]}
+    {[if eq ($.FieldWithIdExist "FormatCtPrice") true]}<td class="styleDATA" style='mso-number-format:Standard;'>{[.FormatCtPrice]}</td>{[end]}
+    <!--{[if eq ($.FieldWithIdExist "CtPName") true]}<td class="styleSTR" style='mso-number-format:"\@"'>{[.CtPName.Value]}</td>{[end]}-->
+</tr>
+{[end]}
+</table></body></html>

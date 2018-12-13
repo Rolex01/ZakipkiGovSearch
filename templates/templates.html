@@ -1,0 +1,30 @@
+{[define "templates"]}
+      {[template "header" $]}
+        <main>
+  <section>{[if ne $.SaveParams ""]}
+    <form action="/templates/" method="POST">
+      	<h4>Введите имя для шаблона:</h4>
+      	<input type="hidden" name="save" value="{[$.SaveParams]}">
+        <input type="text" name="name">
+        <input type="submit" value="Сохранить">
+    </form>
+    {[else]}
+  <h4>Сохраненные шаблоны запросов:</h4>
+  {[if eq $.IsEmpty false]}
+      <ul type="square">
+          {[range $.Data]}
+          <li> <a href="{[.Link]}">{[.Name]}</a> <a href='{[.DelLink]}'><img src="https://cdn2.iconfinder.com/data/icons/diagona/icon/16/101.png" style="margin-top: -3px;margin-left: 5px;" alt="Удалить" title="Удалить"></a></li>
+          {[end]}
+      </ul>
+  {[else]}
+    <p>К сожалению, список шаблонов пуст</p>
+  {[end]}
+  {[end]}
+</section>
+
+        </main>
+
+      {[template "footer" $]}
+  </body>
+  </html>
+{[end]}

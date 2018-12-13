@@ -1,0 +1,252 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head>
+<style>
+{[if ne $.Email "mbulgako@ITS.JNJ.com"]}
+<!--
+{[end]}
+table
+{
+    mso-displayed-decimal-separator: "\,";
+    mso-displayed-thousand-separator: " ";
+}
+@page
+{
+    margin: 1.0in .75in 1.0in .75in;
+    mso-header-margin: .5in;
+    mso-footer-margin: .5in;
+}
+tr
+{
+/*    mso-number-format: "\@";*/
+    mso-height-source: userset;
+    height:60px;
+}
+col
+{
+    mso-width-source: userset;
+    mso-height-source: userset;
+    text-align: center;
+    vertical-align: middle;
+    mso-ruby-visibility:none;
+}
+br
+{
+    mso-data-placement: same-cell;
+}
+a
+{
+    font-size: 11px;
+}
+.styleHEAD
+{
+    mso-number-format: "\@";
+    border: .5pt solid black;
+    mso-pattern: auto none;
+    white-space: normal;
+    vertical-align: top;
+    text-align: left;
+    height:100%;
+}
+.styleDATA
+{
+    font-size: 11px;
+    mso-pattern: auto none;
+    border-top: .5pt solid silver;
+    border-right: .5pt solid silver;
+    border-bottom: .5pt solid silver;
+    border-left: .5pt solid silver;
+    mso-height-source: auto;
+    mso-number-format:"\@*"
+}
+.styleDATE
+{
+    font-size: 11px;
+    mso-pattern: auto none;
+    border-top: .5pt solid silver;
+    border-right: .5pt solid silver;
+    border-bottom: .5pt solid silver;
+    border-left: .5pt solid silver;
+    mso-height-source: auto;
+    mso-number-format:"Short Date"
+}
+.styleSTR
+{
+    font-size: 11px;
+    text-align: left;
+    mso-number-format:"\@";
+    border-top: .5pt solid silver;
+    border-right: .5pt solid silver;
+    border-bottom: .5pt solid silver;
+    border-left: .5pt solid silver;
+    mso-pattern: auto none;
+    white-space: normal;
+    height:100%;
+}
+.styleGENERAL
+{
+    font-size: 11px;
+    text-align: left;
+    mso-number-format:General;
+    border-top: .5pt solid silver;
+    border-right: .5pt solid silver;
+    border-bottom: .5pt solid silver;
+    border-left: .5pt solid silver;
+    mso-pattern: auto none;
+    white-space: normal;
+    height:100%;
+}
+
+.styleFooter
+{
+    font-size: 11px;
+    text-align: left;
+    border-top: .5pt solid silver;
+    border-right: .5pt solid silver;
+    border-bottom: .5pt solid silver;
+    border-left: .5pt solid silver;
+    height:100%;
+    mso-pattern: auto none;
+    white-space: normal;
+}
+{[if ne $.Email "mbulgako@ITS.JNJ.com"]}
+-->
+{[end]}
+</style>
+
+<!--[if gte mso 9]><xml>
+<x:ExcelWorkbook>
+    <x:ExcelWorksheets>
+        <x:ExcelWorksheet>
+            <x:Name>Статус документов</x:Name>
+            <x:WorksheetOptions>
+            <x:DefaultRowHeight>225</x:DefaultRowHeight>
+            <x:Unsynced/>
+            <x:Selected/>
+            <x:DoNotDisplayGridlines/>
+            <x:FreezePanes/>
+            <x:FrozenNoSplit/>
+            <x:SplitHorizontal>1</x:SplitHorizontal>
+            <x:TopRowBottomPane>1</x:TopRowBottomPane>
+            <x:ActivePane>2</x:ActivePane>
+            </x:WorksheetOptions>
+    </x:ExcelWorksheet>
+</x:ExcelWorksheets>
+</x:ExcelWorkbook>
+<o:shapelayout v:ext="edit">
+<o:idmap v:ext="edit" data="1"/>
+</o:shapelayout>
+<style>
+    v\:* {behavior:url(#default#VML);}
+    o\:* {behavior:url(#default#VML);}
+    x\:* {behavior:url(#default#VML);}
+    .shape {behavior:url(#default#VML);}
+</style>
+</xml><![endif]--></head><body><table>
+
+
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<col style="width:150px">
+<!-- <col style="width:150px"> -->
+<col style="width:150px">
+
+<col width="0px" span="240" style="display:none;mso-width-source:userset;mso-width-alt:0" >
+
+<tr style="height:90px">
+    {[if eq ($.FieldWithIdExist "RegNum") true]}<th class="styleHEAD">Номер реестровой записи</th>{[end]}
+    {[if eq ($.FieldWithIdExist "Customer") true]}<th class="styleHEAD">Наименование заказчика</th>{[end]}
+    {[if eq ($.FieldWithIdExist "CustomerINN") true]}<th class="styleHEAD">ИНН Заказчика</th>{[end]}
+    {[if eq ($.FieldWithIdExist "CustomerKPP") true]}<th class="styleHEAD">КПП Заказчика</th>{[end]}
+    {[if eq ($.FieldWithIdExist "CustomerRegionGet") true]}<th class="styleHEAD">Регион Заказчика</th>{[end]}
+    {[if eq ($.FieldWithIdExist "FixBudgetSource") true]}<th class="styleHEAD">Источник финансирования</th>{[end]}
+    {[if eq ($.FieldWithIdExist "FixBudget") true]}<th class="styleHEAD">Бюджет</th>{[end]}
+    {[if eq ($.FieldWithIdExist "Placing") true]}<th class="styleHEAD">Способ размещения закупки</th>{[end]}
+    {[if eq ($.FieldWithIdExist "PurchaseNumberFix") true]}<th class="styleHEAD">Номер закупки</th>{[end]}
+    {[if eq ($.FieldWithIdExist "ObjectInfo") true]}<th class="styleHEAD">Наименование закупки</th>{[end]}
+    {[if eq ($.FieldWithIdExist "SignedXlsDate") true]}<th class="styleHEAD">Дата заключения контракта</th>{[end]}
+    {[if eq ($.FieldWithIdExist "Number") true]}<th class="styleHEAD">Номер контракта</th>{[end]}
+    {[if eq ($.FieldWithIdExist "NMCKFormat") true]}<th class="styleHEAD">НМЦК</th>{[end]}
+    {[if eq ($.FieldWithIdExist "NMCKUSDFormat") true]}<th class="styleHEAD">НМЦК, долл. США</th>{[end]}
+    {[if eq ($.FieldWithIdExist "TotalSumFormat") true]}<th class="styleHEAD">Цена контракта, руб.</th>{[end]}
+    {[if eq ($.FieldWithIdExist "TotalSumUSDFormat") true]}<th class="styleHEAD">Цена контракта, долл. США</th>{[end]}
+    {[if eq ($.FieldWithIdExist "Name") true]}<th class="styleHEAD">Наименование товаров, работ и услуг</th>{[end]}
+    {[if eq ($.FieldWithIdExist "OKPD") true]}<th class="styleHEAD">Код по ОКПД</th>{[end]}
+    {[if eq ($.FieldWithIdExist "OKPDInfo") true]}<th class="styleHEAD">Расшифровка ОКПД</th>{[end]}
+    {[if eq ($.FieldWithIdExist "Unit") true]}<th class="styleHEAD">Единицы измерения</th>{[end]}
+    {[if eq ($.FieldWithIdExist "PriceFormat") true]}<th class="styleHEAD">Цена за единицу, руб.</th>{[end]}
+    {[if eq ($.FieldWithIdExist "PriceUSDFormat") true]}<th class="styleHEAD">Цена за единицу, долл. США</th>{[end]}
+    {[if eq ($.FieldWithIdExist "Quantity") true]}<th class="styleHEAD">Количество</th>{[end]}
+    {[if eq ($.FieldWithIdExist "SumFormat") true]}<th class="styleHEAD">Сумма, руб.</th>{[end]}
+    {[if eq ($.FieldWithIdExist "SumUSDFormat") true]}<th class="styleHEAD">Сумма, долл. США</th>{[end]}
+    {[if eq ($.FieldWithIdExist "Supplier") true]}<th class="styleHEAD">Поставщик</th>{[end]}
+    {[if eq ($.FieldWithIdExist "SupplierAddress") true]}<th class="styleHEAD">Место нахождения (место жительства) поставщика</th>{[end]}
+    {[if eq ($.FieldWithIdExist "SupplierINN") true]}<th class="styleHEAD">ИНН Поставщика</th>{[end]}
+    {[if eq ($.FieldWithIdExist "SupplierPhone") true]}<th class="styleHEAD">Телефон Поставщика</th>{[end]}
+    {[if eq ($.FieldWithIdExist "ExecDate") true]}<th class="styleHEAD">Дата окончания исполнения контракта</th>{[end]}
+    <!-- Статус контракта -->
+    {[if eq ($.FieldWithIdExist "PaidFormat") true]}<th class="styleHEAD">Фактически оплачено</th>{[end]}
+</tr>
+{[range $.Data]}
+{[if eq .Check true]}
+<tr>
+    {[if eq ($.FieldWithIdExist "RegNum") true]}<td class="styleSTR" style='mso-number-format:"\@"'><a href="http://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber={[.RegNum]}" target="_blank">{[.RegNum]}</a></td>{[end]}
+    {[if eq ($.FieldWithIdExist "Customer") true]}<td class="styleSTR" style='mso-number-format:"\@"'>{[.Customer]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "CustomerINN") true]}<td class="styleSTR" style='mso-number-format:"\@"'>{[.CustomerINN]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "CustomerKPP") true]}<td class="styleSTR" style='mso-number-format:"\@"'>{[.CustomerKPP.Value]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "CustomerRegionGet") true]}<td class="styleSTR" style='mso-number-format:"\@"'>{[.CustomerRegionGet]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "FixBudgetSource") true]}<td class="styleSTR" style='mso-number-format:"\@"'>{[.FixBudgetSource]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "FixBudget") true]}<td class="styleSTR" style='mso-number-format:"\@"'>{[.FixBudget]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "Placing") true]}<td class="styleSTR" style='mso-number-format:"\@"'>{[.Placing.Value]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "PurchaseNumberFix") true]}<td class="styleSTR" style='mso-number-format:"\@"'><a href="http://zakupki.gov.ru/epz/order/notice/ea44/view/common-info.html?regNumber={[.PurchaseNumberFix]}" target="_blank">{[.PurchaseNumberFix]}</a></td>{[end]}
+    {[if eq ($.FieldWithIdExist "ObjectInfo") true]}<td class="styleSTR">{[.ObjectInfo.Value]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "SignedXlsDate") true]}<td class="styleDATE" style='mso-number-format:"\@"'>{[.SignedXlsDate]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "Number") true]}<td class="styleSTR" style='mso-number-format:"\@"'>{[.Number.Value]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "NMCKFormat") true]}<td class="styleDATA" style="mso-number-format:Standard;">{[.NMCKFormat]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "NMCKUSDFormat") true]}<td class="styleDATA" style="mso-number-format:Standard;">{[.NMCKUSDFormat]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "TotalSumFormat") true]}<td class="styleDATA" style="mso-number-format:Standard;">{[.TotalSumFormat]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "TotalSumUSDFormat") true]}<td class="styleDATA" style="mso-number-format:Standard;">{[.TotalSumUSDFormat]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "Name") true]}<td class="styleSTR" style='mso-number-format:"\@"'>{[.Name]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "OKPD") true]}<td class="styleSTR" style='mso-number-format:"\@"'>{[.OKPD]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "OKPDInfo") true]}<td class="styleSTR" style='mso-number-format:"\@"'>{[.OKPDInfo.Value]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "Unit") true]}<td class="styleSTR" style='mso-number-format:"\@"'>{[.Unit]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "PriceFormat") true]}<td class="styleDATA" style="mso-number-format:Standard;">{[.PriceFormat]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "PriceUSDFormat") true]}<td class="styleDATA" style="mso-number-format:Standard;">{[.PriceUSDFormat]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "Quantity") true]}<td class="styleDATA" style="mso-number-format:0">{[.Quantity]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "SumFormat") true]}<td class="styleDATA" style="mso-number-format:Standard;">{[.SumFormat]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "SumUSDFormat") true]}<td class="styleDATA" style="mso-number-format:Standard;">{[.SumUSDFormat]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "Supplier") true]}<td class="styleSTR" style='mso-number-format:"\@"'>{[.Supplier.Value]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "SupplierAddress") true]}<td class="styleSTR" style='mso-number-format:"\@"'>{[.SupplierAddress.Value]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "SupplierINN") true]}<td class="styleSTR" style='mso-number-format:"\@"'>{[.SupplierINN.Value]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "SupplierPhone") true]}<td class="styleSTR" style='mso-number-format:"\@"'>{[.SupplierPhone.Value]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "ExecDate") true]}<td class="styleDATE" style='mso-number-format:"\@"'>{[.ExecDate]}</td>{[end]}
+    {[if eq ($.FieldWithIdExist "PaidFormat") true]}<td class="styleDATA" style="mso-number-format:Standard;">{[.PaidFormat]}</td>{[end]}
+</tr>
+{[end]}
+{[end]}
+</table></body></html>

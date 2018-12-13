@@ -1,0 +1,64 @@
+{[define "header"]}
+<html lang="ru">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="user-scalable=yes,width=device-width,initial-scale=1">
+    <title>Госзакупки+</title>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/loading.css">
+    <link rel="stylesheet" href="/bootstrap-multiselect.css" />
+    <link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="/bower_components/moment/min/moment-with-locales.min.js"></script>
+	<script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
+    <script src="/select2.min.js"></script>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+
+<header>
+    <table width="940px">
+        <tr>
+            <td width="530px">
+                <nav style="font-size: 22px; margin-left: 0%; padding: 2px; display:inline;">
+                    <span class="label">Искать:</span>
+                    <span><a href="/contracts/" {[if eq $.NavType "contracts"]} style="color:black;font-size:26px;position:relative;bottom:1px;"{[end]}>ГосКонтракты</a></span>
+                    <span><a href="/notifications/" {[if eq $.NavType "notifications"]}style="color:black;font-size:26px;position:relative;bottom:1px;"{[end]}>Аукционы</a></span>
+                    <span><a href="/notifications223/" {[if eq $.NavType "notifications223"]}style="color:black;font-size:26px;position:relative;bottom:1px;"{[end]}>223 ФЗ</a></span>
+                </nav>
+            </td>
+            <td weight="157px" align="right">
+                <section style="margin-left:1%; display:inline;">
+                    <!--a href="/manual.pdf" target="_blank" style="border:0px;" title="Правила поиска"><img width="25px" height="25px" src="https://cdn2.iconfinder.com/data/icons/bitsies/128/Info-32.png" style="vertical-align: middle;" title="Правила поиска"></a>
+                    {[if ge $.Lvl 90]} <a href="/control/?action=list" style="border:0px;"><img width="25px" height="25px" src="https://cdn4.iconfinder.com/data/icons/ballicons-2-free/100/heart-32.png" style="vertical-align: middle;"></a>{[end]}
+                    <a href="/user/password/" style="border: 0px;"><img width="25px" height="25px" src="/img/bye.svg" style="vertical-align: middle;"></a-->
+                    <a style="font-size: 17;" href="/bye">Выход</a>
+                </section>
+            </td>
+        </tr>
+
+    </table>
+    {[if ge $.Lvl 100]}
+        <table width="940px" cellpadding=5 cellspacing=10 border=0 width=900 style="background-color:#f4f4f4;">
+            <tr>
+                <td bgcolor="#ffffff" align="center">
+                    <!-- start Fla-shop.com HTML5 Map -->
+                    <div style="position: relative;">
+                        <link href="/map.css" rel="stylesheet" type="text/css">
+                        <script type="text/javascript" src="/raphael-min.js"></script>
+                        <script type="text/javascript" src="/settings.js"></script>
+                        <script type="text/javascript" src="/map.js"></script>
+                    </div>
+                    <!-- end HTML5 Map -->
+                </td>
+            </tr>
+        </table>
+    {[end]}
+</header>
+{[end]}

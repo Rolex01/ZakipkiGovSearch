@@ -1,0 +1,56 @@
+<html lang="ru"><head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="user-scalable=yes,width=device-width,initial-scale=1">
+    <title>Регистрация - Госзакупки+</title>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="/index.css">
+    <link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<script type="text/javascript" src="/bower_components/moment/min/moment-with-locales.min.js"></script>
+	<script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <style>
+    input {
+        width: 250px;
+        height: 40px;
+        margin: 10px;
+    }
+    </style>
+
+
+</head>
+    <body>
+
+
+
+
+        <main>
+            <form action="/signup/" method="POST">
+                <section style="
+    text-align: center;
+">
+
+                    <input tabindex="1" type="text" name="name" placeholder="ФИО" title="Введите Ваше имя" value="{{.Name}}" style="padding: 10px;"><br>
+                    <input tabindex="2" type="text" name="email" placeholder="Email" title="Введите адрес вашей электронной почты" value="{{.Email}}" style="padding: 10px;"><br>
+                    <input tabindex="3" type="password" name="password" placeholder="Пароль" title="Введите ваш пароль" value="{{.Password}}" style="padding: 10px;"><br>
+{{if ne $.Error ""}}
+<span style="color:red">{{.Error}}</span><br>
+{{else}}
+<span>Для регистрации заполните все поля формы</span><br>
+{{end}}
+<a href="/hi/" style="">Уже зарегистрированы? Войти</a><span style="margin-left: 3px;margin-right: 3px;">
+    <br><input tabindex="4" type="submit" value="Регистрация">
+<hr style="width: 300px;">
+                </section>
+
+            </form>
+
+
+
+        </main>
+        <script>
+		</script>
+
+
+
+</body></html>

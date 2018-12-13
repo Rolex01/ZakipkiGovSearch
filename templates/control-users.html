@@ -1,0 +1,112 @@
+<html lang="ru"><head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="user-scalable=yes,width=device-width,initial-scale=1">
+    <title>Админ панель - Госзакупки+</title>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/bootstrap-multiselect.css">
+    <link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="/bower_components/moment/min/moment-with-locales.min.js"></script>
+	<script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet">
+    <script src="/select2.min.js"></script>
+
+</head>
+    <body cz-shortcut-listen="true">
+
+            <aside style="padding: 10px;font-size: 14px;background-color: #fcf8e3;font-weight: 600;text-align: center;">
+                <span style="color:red">Внимание!</span> Для перехода в архивный сервис «Мониторинг цен госзакупок» для поиска по гос.контрактам и аукционам за 2011-2015 гг. <a href="/old" target="_blank">нажмите эту ссылку</a>
+            </aside>
+
+
+        <header>
+        <nav>
+            <span class="label">Искать:</span>
+            <span><a href="/contracts/" style="color:black">ГосКонтракты</a></span>
+            <span><a href="/notifications/">Аукционы</a></span></nav>
+            {[if ge $.Lvl 90]}<span><a href="/notifications223/">223 ФЗ</a></span>{[end]}
+        <section>
+            <img src="/img/bye.svg" style="vertical-align: middle;">
+            <a style="font-size: 18;" href="/bye">Выход</a>
+        </section>
+        <nav style="
+    margin-left: 390;
+    margin-top: -20px;
+"><span style="
+    margin-left: 5px;
+    margin-top: -5px;
+"><a href="/notifications/">Админ панель</a></span>
+</nav></header>
+        <main>
+
+  <section class="col-md-5" style="
+    /* max-width: 400px; */
+    display: inline-block;
+"><h4>Добавить пользователя:</h4>
+
+  <p><label>Email:</label><input type="email" class="form-control"></p>
+  <p><label>Имя:</label><input type="text" class="form-control"></p>
+
+<div class="input-group">
+  <label>Пароль:</label>
+          <input type="text" class="form-control" aria-label="Text input with multiple buttons">
+          <div class="input-group-btn">
+
+            <button type="button" class="btn btn-default" style="
+    margin-top: 25px;
+">Сгенерировать</button>
+          </div>
+        </div>
+<p></p>
+<p></p>
+  <p><label>Уровень доступа:</label><select class="form-control"><option>Демо (Просрочен)</option><option>Клиент (Просрочена оплата)</option><option selected="">Демо</option><option>Клиент</option><option>Сотрудник</option><option>Администратор</option>
+</select>
+ </p>
+  <p><input type="submit" class="form-control btn btn-primary" value="Готово!"></p>
+
+</section>
+  <section class="col-md-7">
+  <h4>Поиск пользователя:</h4>
+  <div class="form-group">
+    <p class="col-md-5">
+    <label>Email:</label><input class="form-control" type="email">
+    </p>
+    <p class="col-md-5">
+    <label>Имя:</label><input type="text" class="form-control"></p>
+    <p></p>
+    <p class="col-md-1">
+    <input type="submit" value="Поиск" style="margin-top: 25px;" class=" btn btn-default">
+    </p>
+  </div>
+  <div>
+      <table class="table">
+        <thead>
+            <th>#</th>
+            <th>Email</th>
+            <th>Имя</th>
+            <th>Дата регистрации</th>
+            <th>Уровень доступа</th>
+            <th>Срок действия</th>
+        </thead>
+      </table>
+  </div>
+</section>
+
+
+
+
+            <script>
+
+    		</script>
+
+
+        </main>
+
+
+
+<span class="gr__tooltip gr__flipped" data-content="No definition found" style="top: -9999px; left: 481.5px; opacity: 0;"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle" style="margin-left: 34px;"></span></span>
+
+</body></html>

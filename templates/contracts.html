@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tender One - база данных</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js"></script>
+
+    <style>
+        main.container {
+            margin-top: 75px;
+        }
+        .display-4 {
+            font-size: 2.5rem;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="/"><img src="/img/logo_white.png" height="40px"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/auctions223">223-ФЗ</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/auctions">Аукционы</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/contracts">Контракты</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Учетная запись
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Изменить пароль</a>
+                    <a class="dropdown-item" href="/bye">Выход</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main role="main" class="container">
+    <div class="row">
+        <div class="col mt-3">
+            <h1 class="text-center display-4">База данных Контрактов по 44-ФЗ</h1>
+            <form>
+                <div class="col col-10 offset-1 mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="text-center mb-0">
+                                Фильтры поиска
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-row">
+                                <div class="col-3">
+                                    <label class="mb-0" for="DateFrom">Дата размещения:</label>
+                                </div>
+                                <div class="col-4">
+                                    <input tabindex="1" type="text" class="form-control" id="DateFrom" name="DateFrom" value="{{.FilterDateFrom}}">
+                                </div>
+                                <div class="text-center align-self-center">—</div>
+                                <div class="col-4">
+                                    <input tabindex="1" type="text" class="form-control" id="DateTo" name="DateTo" value="{{.FilterDateTo}}">
+                                </div>
+                            </div>
+
+                            <div class="form-row mt-2">
+                                <div class="col-3">
+                                    <label class="mb-0" for="DateEFrom">Дата исполнения:</label>
+                                </div>
+                                <div class="col-4">
+                                    <input tabindex="1" type="text" class="form-control" id="DateEFrom" name="DateEFrom" value="{{.FilterDateExecFrom}}">
+                                </div>
+                                <div class="text-center align-self-center">—</div>
+                                <div class="col-4">
+                                    <input tabindex="1" type="text" class="form-control" id="DateETo" name="DateETo" value="{{.FilterDateExecTo}}">
+                                </div>
+                            </div>
+
+                            <div class="form-row mt-2">
+                                <div class="col-3">
+                                    <label class="mb-0" for="main_query">Ключевые слова:</label>
+                                </div>
+                                <div class="col-9">
+                                    <input tabindex="3" type="text" class="form-control" id="main_query" name="query" placeholder="Введите ключевые слова" values="{{.Query}}">
+                                </div>
+                            </div>
+
+                            <div class="form-row mt-2">
+                                <div class="col-3">
+                                    <label class="mb-0" for="Cnum">Номер реестровой записи:</label>
+                                </div>
+                                <div class="col-9">
+                                    <input tabindex="7" type="text" class="form-control" id="Cnum" name="Cnum" placeholder="Введите номера реестровых записей через запятую" value="{{.FilterRegnum}}">
+                                </div>
+                            </div>
+
+                            <div class="form-row mt-2">
+                                <div class="col-3">
+                                    <label class="mb-0" for="Anum">Номер извещения:</label>
+                                </div>
+                                <div class="col-9">
+                                    <input tabindex="7" type="text" class="form-control" id="Anum" name="Anum" placeholder="Введите номера извещений разделенные запятой" value="{{.FilterPnum}}">
+                                </div>
+                            </div>
+
+                            <div class="form-row mt-2">
+                                <div class="col-3">
+                                    <label class="mb-0" for="SumFrom">Сумма контракта:</label>
+                                </div>
+                                <div class="col-4">
+                                    <input tabindex="4" class="form-control" id="SumFrom" type="number" min="0" step="0.01" name="SumFrom" placeholder="Нижняя граница" title="Нижняя граница" value="{{if ne $.FilterSumFrom 0.00}}{{.FilterSumFrom}}{{end}}">
+                                </div>
+                                <div class="text-center align-self-center">—</div>
+                                <div class="col-4">
+                                    <input tabindex="5" class="form-control" id="SumTo" type="number" min="0" step="0.01" name="SumTo" placeholder="Верхняя граница" title="Верхняя граница" value="{{if ne $.FilterSumTo 0.00}}{{.FilterSumTo}}{{end}}">
+                                </div>
+                            </div>
+
+                            <div class="form-row mt-2">
+                                <div class="col-3">
+                                    <label class="mb-0" for="PriceFrom">Цена за единицу:</label>
+                                </div>
+                                <div class="col-4">
+                                    <input tabindex="4" class="form-control" id="PriceFrom" type="number" min="0" step="0.01" name="PriceFrom" placeholder="Нижняя граница" title="Нижняя граница" value="{{if ne $.FilterPriceFrom 0.00}}{{.FilterPriceFrom}}{{end}}">
+                                </div>
+                                <div class="text-center align-self-center">—</div>
+                                <div class="col-4">
+                                    <input tabindex="5" class="form-control" id="PriceTo" type="number" min="0" step="0.01" name="PriceTo" placeholder="Верхняя граница" title="Верхняя граница" value="{{if ne $.FilterPriceTo 0.00}}{{.FilterPriceTo}}{{end}}">
+                                </div>
+                            </div>
+
+                            <div class="form-row mt-2">
+                                <div class="col-3">
+                                    <label class="mb-0" for="searchOKPD">ОКПД:</label>
+                                </div>
+                                <div class="col-9">
+                                    <select tabindex="6" id="searchOKPD" name="OKPDCode" class="form-control" multiple="multiple" style="width: 100%;" placeholder="Введите расшифровку или код по ОКПД" title="Введите расшифровку или код по ОКПД">
+                                        {{.GenFilterCodeContracts}}
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row mt-2">
+                                <div class="col-3">
+                                    <label class="mb-0" for="searchOKPD2">ОКПД2:</label>
+                                </div>
+                                <div class="col-9">
+                                    <select tabindex="6" id="searchOKPD2" name="OKPDCode2" class="form-control" multiple="multiple" style="width: 100%;" placeholder="Введите расшифровку или код по ОКПД2" title="Введите расшифровку или код по ОКПД2">
+                                        {{.GenFilterCode2Contracts}}
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row mt-2">
+                                <div class="col-3">
+                                    <label class="mb-0" for="searchCustomer">Заказчик:</label>
+                                </div>
+                                <div class="col-9">
+                                    <select tabindex="9" id="searchCustomer" name="Customer" class="form-control" style="width: 100%;" multiple="multiple" placeholder="Введите ИНН или наименование организации" title="Введите ИНН или наимеонвание организации">
+                                        {{.GenFilterCustomerContracts}}
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row mt-2">
+                                <div class="col-3">
+                                    <label class="mb-0" for="searchSupplier">Поставщик:</label>
+                                </div>
+                                <div class="col-9">
+                                    <select tabindex="9" id="searchSupplier" name="Supplier" class="form-control" style="width: 100%;" multiple="multiple" placeholder="Введите ИНН или наименование организации" title="Введите ИНН или наимеонвание организации">
+                                        {{.GenFilterSupplierContracts}}
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row mt-2" id="results-anchor">
+                                <div class="col-3">
+                                    <label class="mb-0" for="region-set">Поиск по региону:</label>
+                                </div>
+                                <div class="col-9">
+                                    <select tabindex="10" id="region-set" name="Region" class="form-control" style="width: 100%;" multiple="multiple" placeholder="Введите регион" title="Введите регион">
+                                        {{.GenFilterRegionContracts}}
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row mt-4">
+                                <div class="col-3 offset-3">
+                                    <button tabindex="11" type="submit" class="btn btn-primary form-control">Найти</button>
+                                </div>
+                                <div class="col-3">
+                                    <a href="/contracts/" class="btn btn-secondary form-control">Сбросить</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {{if eq $.Count 0}}
+    {{if eq $.IsSearch true }}
+    <div class="row">
+        <div class="col col-12 mt-3">
+            <h5 class="text-center text-muted mt-3">
+                По вашему запросу ничего не найдено. Попробуйте изменить параметры поиска.<br><span class="font-weight-bold">Обратите внимание на <a href="/regulations.pdf" target="_blank">правила поиска</a>.</span>
+            </h5>
+        </div>
+    </div>
+    {{end}}
+    {{end}}
+
+    {{if ne $.Count 0}}
+    <div class="row">
+        <div class="col col-12 mt-3 mb-3">
+            <h4 class="text-center">Реестр контрактов 44-ФЗ</h4>
+            <h5 class="text-center text-muted mt-3">
+                Найдено {{.Total}} записей <a href="{{.ExcelLink}}" title="Экспорт результатов в Excel"><i class="fa fa-file-excel-o"></i></a>
+            </h5>
+        </div>
+        {{.Pages}}
+        <div class="col col-12 mt-2">
+            <table class="table">
+                <thead class="thead-light">
+                <tr>
+                    <!--th scope="col">Наименование</th>
+                    <th scope="col">Дата</th>
+                    <th scope="col">Номер</th>
+                    <th scope="col">Организация</th>
+                    <th scope="col">Заказчик</th>
+                    <th scope="col">Регион</th-->
+
+                    <th scope="col">Наименование</th>
+                    <th scope="col">Дата заключения</th>
+                    <th scope="col">Номер</th>
+                    <th scope="col">Цена за ед.</th>
+                    <th scope="col">Кол-во (Единицы)</th>
+                    <th scope="col">ОКПД</th>
+                    <th scope="col">Заказчик</th>
+                    <th scope="col">Регион</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{range $.Data}}
+                <tr style="font-size: 13px;">
+                    <!--td title='{{.ObjectInfo}}'-->
+                    <td><div class="row-hidden" title="{{.Name}}">{{.HightlightQuery}}</div></td>
+                    <td>{{.SignedDate}}</td>
+                    <td><a href="http://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber={{.RegNum}}" target="_blank">{{.RegNum}}</a></td>
+                    <td><div>{{.PriceFormat}}</div></td>
+                    <td title="{{.QuantityHint}}"><div class="row-hidden">{{.Quantity}} ({{.Unit}})</div></td>
+                    <td title='{{.OKPDInfo.Value}}'>{{.OKPD}}</td>
+                    <td>
+                        {{if .OrgCode.Valid}}
+                            <a href="http://zakupki.gov.ru/pgz/public/action/organization/view?source=epz&organizationCode={{.OrgCode.Value}}" target="_blank" title='{{.Customer}}'>{{.Customer}}</a>
+                        {{else}}
+                            {{.Customer}}
+                        {{end}}
+                    </td>
+                    <td>{{.CustomerRegionGet}}</td>
+                </tr>
+                {{end}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {{.Pages}}
+    {{end}}
+</main>
+<script>
+    $('#DateFrom').datetimepicker({locale: 'ru',format: 'L',minDate: new Date(2014,0,1),maxDate: new Date()} );
+    $('#DateTo').datetimepicker({locale: 'ru',format: 'L',minDate: new Date(2014,0,1),maxDate: new Date()});
+    $('#DateEFrom').datetimepicker({locale: 'ru',format: 'L',minDate: new Date(2014,0,1),maxDate: new Date()} );
+    $('#DateETo').datetimepicker({locale: 'ru',format: 'L',minDate: new Date(2014,0,1),maxDate: new Date()});
+
+    function formatCustomer(data) {
+        if (data.loading) return data.text;
+        console.log(data)
+        customer = data.text
+        var markup = '<div style="width:85%;">'+'<b>'+customer.Shortname+'<br>ИНН: '+customer.Inn+'<br>КПП: '+customer.Kpp+'</b></div>';
+        return markup
+    }
+    function formatCustomerSelection(data, container, query) {
+        console.log(data,container, query)
+        return data.title
+    }
+    $('#region-set').select2({
+        language: 'ru',
+        placeholder: 'Введите регион',
+    });
+
+    $(document).ready(function() {
+        {{if eq $.IsSearch true }}
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#results-anchor").offset().top - 180
+        }, 2000);
+        {{end}}
+        $("#searchOrg").select2({
+            language: 'ru',
+            placeholder: 'Введите ИНН или наименование организации',
+            ajax: {
+                url: "/org/",
+                dataType: 'json',
+                delay: 250,
+                data: function (params) {
+                    return {
+                        query: params.term,
+                    };
+                },
+                processResults: function (data, page) {
+                    console.log(data)
+                    var results = [];
+                    $.each(data, function (index, customer) {
+                        results.push({
+                            id: customer.Inn,
+                            text: customer,
+                            title: customer.Shortname,
+                        });
+                    });
+                    return {
+                        results: results
+                    };
+                },
+                cache: true,
+            },
+            escapeMarkup: function (markup) { return markup; },
+            minimumInputLength: 3,
+            templateResult: formatCustomer,
+            templateSelection: formatCustomerSelection,
+        });
+        $("#searchCustomer").select2({
+            language: 'ru',
+            placeholder: 'Введите ИНН или наименование организации',
+            ajax: {
+                url: "/org/",
+                dataType: 'json',
+                delay: 250,
+                data: function (params) {
+                    return {
+                        query: params.term,
+                    };
+                },
+                processResults: function (data, page) {
+                    console.log(data)
+                    var results = [];
+                    $.each(data, function (index, customer) {
+                        results.push({
+                            id: customer.Inn,
+                            text: customer,
+                            title: customer.Shortname,
+                        });
+                    });
+                    return {
+                        results: results
+                    };
+                },
+                cache: true,
+            },
+            escapeMarkup: function (markup) { return markup; },
+            minimumInputLength: 3,
+            templateResult: formatCustomer,
+            templateSelection: formatCustomerSelection,
+        });
+
+        function formatOKPD(data) {
+            if (data.loading) return data.text;
+            console.log(data)
+            customer = data.text
+            var markup = '<div style="width:85%;">'+'<b>'+customer.Name+'</b><br>'+customer.Code+'</div>';
+            return markup
+        }
+        function formatOKPDSelection(data, container, query) {
+            console.log("tatatat")
+            console.log(data,container, query)
+            console.log("tatatat2")
+            return data.title
+        }
+
+        $("#searchOKPD").select2({
+            language: 'ru',
+            placeholder: 'Введите расшифровку или код по ОКПД',
+            ajax: {
+                url: "/api/okpd/",
+                dataType: 'json',
+                delay: 250,
+                data: function (params) {
+                    return {
+                        query: params.term, // search term
+                        v: 1,
+                    };
+                },
+                processResults: function (data, page) {
+                    console.log(data)
+                    var results = [];
+                    $.each(data, function (index, okpd) {
+                        results.push({
+                            id: okpd.Row,
+                            text: okpd,
+                            title: okpd.Code,
+                        });
+                    });
+                    return {
+                        results: results
+                    };
+                },
+                cache: true,
+            },
+            escapeMarkup: function (markup) { return markup; },
+            minimumInputLength: 2,
+            templateResult: formatOKPD,
+            templateSelection: formatOKPDSelection,
+        });
+        $("#searchOKPD2").select2({
+            language: 'ru',
+            placeholder: 'Введите расшифровку или код по ОКПД2',
+            ajax: {
+                url: "/api/okpd/",
+                dataType: 'json',
+                delay: 250,
+                data: function (params) {
+                    return {
+                        query: params.term, // search term
+                        v: 2,
+                    };
+                },
+                processResults: function (data, page) {
+                    console.log(data)
+                    var results = [];
+                    $.each(data, function (index, customer) {
+                        results.push({
+                            id: customer.Row,
+                            text: customer,
+                            title: customer.Code,
+                        });
+                    });
+                    return {
+                        results: results
+                    };
+                },
+                cache: true,
+            },
+            escapeMarkup: function (markup) { return markup; },
+            minimumInputLength: 2,
+            templateResult: formatOKPD,
+            templateSelection: formatOKPDSelection,
+        });
+        function formatSupplier(data) {
+            if (data.loading) return data.text;
+            var markup = '<div style="width:85%;">'+'<b>'+data.title+'</b><br>ИНН:'+data.inn+'&nbsp;КПП:'+data.kpp+'</div>';
+            return markup
+        }
+
+        function formatSupplierSelection(data) {
+            return data.text;
+        }
+
+        $("#searchSupplier").select2({
+            language: 'ru',
+            placeholder: 'Введите ИНН или наименование организации',
+            ajax: {
+                url: "/supplier/",
+                dataType: 'json',
+                delay: 250,
+                data: function (params) {
+                    return {
+                        query: params.term, // search term
+                    };
+                },
+                processResults: function (data, page) {
+                    console.log(data)
+                    var results = [];
+                    $.each(data, function (index, customer) {
+                        results.push({
+                            id:    customer.Inn,
+                            text:  customer.Name.length > 15
+                                ? (customer.Name.substr(0, 15) + '...')
+                                : customer.Name,
+                            title: customer.Name,
+                            inn:   customer.Inn,
+                            kpp:   customer.Kpp
+                        });
+                    });
+                    return {
+                        results: results
+                    };
+                },
+                cache: true,
+            },
+            escapeMarkup: function (markup) { return markup; },
+            minimumInputLength: 3,
+            templateResult: formatSupplier,
+            templateSelection: formatSupplierSelection,
+        });
+    });
+</script>
+<script>
+    window.onload = function() {
+        document.getElementById("DateFrom").value="{{.FilterDateFrom}}";
+        document.getElementById("DateTo").value="{{.FilterDateTo}}";
+        document.getElementById("DateEFrom").value="{{.FilterDateExecFrom}}";
+        document.getElementById("DateETo").value="{{.FilterDateExecTo}}";
+        document.getElementById("main_query").value="{{.Query}}";
+    };
+</script>
+</body>
+</html>

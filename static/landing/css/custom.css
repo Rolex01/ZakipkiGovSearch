@@ -1,0 +1,19 @@
+.navbar .logo-block {
+    background: url('../images/logo.png') 100% 100% no-repeat;
+    height: 50px;
+    width: 200px;
+    background-size: cover;
+}
+
+.navbar.scrolled .logo-block {
+    background: url('../images/logo2.png') 100% 100% no-repeat;
+    background-size: cover;
+}
+
+.pb_section {
+    padding: 8em 0 !important;
+}
+
+.pb_footer {
+    padding: 2em 0 !important;
+}
